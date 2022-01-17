@@ -16,7 +16,12 @@ function submit(){
       linha.children[i].innerHTML = entrada[i].toUpperCase();
       linha.children[i].style = 'background: yellow';
     }
-    //linha.children[i].innerHTML = entrada[i];
+  }
+  if(entrada.toUpperCase() === palavraDoDia.toUpperCase()){
+    const painelDoGanhou = document.getElementById('painel');
+    const tabela = document.getElementById('gameBoard');
+    painelDoGanhou.style="display:block";
+    tabela.style="display:none";
   }
   tentativa++;
 }
