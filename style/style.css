@@ -34,3 +34,10 @@ td{
   font-weight: 700;
   border-radius: 10px;
 }
+
+.placar{
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
+  justify-content: space-between;
+}
