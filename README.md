@@ -27,13 +27,13 @@ Em seguida, vamos testar a palavra pralo:
 
 ![image-3](./docs/image-20220118182124401.png)
 
-![image-5](/home/augustosigolo/Augusto/cermoo/docs/image-20220118182143047.png)
+![image-5](./docs/image-20220118182143047.png)
 
 Quadrados amarelos significam que a letra existe na palavra mas está na posição errada.
 
 Por fim, vamos testar a palavra plano:
 
-![image-4](/home/augustosigolo/Augusto/cermoo/docs/image-20220118183058858.png)
+![image-4](./docs/image-20220118183058858.png)
 
 Por ser a palavra certa, quando você pressionar Enter, poderá escolher compartilhar no Twitter ou jogar de novo. Caso escolha jogar novamente, sua sequencia será acrescentada em 1.
 
