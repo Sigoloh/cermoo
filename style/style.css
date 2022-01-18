@@ -26,7 +26,7 @@ input{
 td{
   border: 2px solid rgb(255, 255, 255, 0.5);
   background: #100a10;
-  color: #191919;
+  color: #cecece;
   width: 5vw;
   height: 5vw;
   text-align: center;
@@ -34,10 +34,26 @@ td{
   font-weight: 700;
   border-radius: 10px;
 }
-
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
 .placar{
+  width: 28vw;
+  padding: 0;
+  align-self: center;
   display: flex;
   flex-direction: row;
-  align-content: flex-start;
+  align-content: center;
   justify-content: space-between;
+  font-family: 'Bebas Neue', cursive;
 }
+
+.placar p{
+  line-height: 0.2em;
+  font-size: 0.7em;
+  color: #cecece;
+}
+

@@ -35,15 +35,15 @@ export default class Updaters{
   computaPalavra(child, sts, linha){
     switch (sts){
       case 'erro':
-        linha.children[child].style = 'background: red';
+        linha.children[child].style = 'background: #ca5035';
         this.jogada.push('&#x1F7E5');
         break;
       case 'certo':
-        linha.children[child].style = 'background: green';
+        linha.children[child].style = 'background: #479a32';
         this.jogada.push('&#x1F7E9');
         break;
       default:
-        linha.children[child].style = 'background: yellow';
+        linha.children[child].style = 'background: #adc00f';
         this.jogada.push('&#x1F7E8');
         break;
     }
@@ -54,15 +54,18 @@ export default class Updaters{
   }
 
   desenhaQuadroNaVitoria(quadroNaVitoria, painelDoGanhou, tabela, matrizresultado){
-    console.log(`Tabela -> ${tabela}`);
+    console.log('Aq');
+    console.log(quadroNaVitoria);
     painelDoGanhou.style="display:block";
     tabela.style="display:none";
+    console.log(matrizresultado);
     for(let k = 0; k < matrizresultado.length; k++){
       for(let h = 0; h < matrizresultado[k].length; h++){
         quadroNaVitoria += `${matrizresultado[k][h]}`;
       }
       quadroNaVitoria += `</br>`;
     }
+    console.log(quadroNaVitoria);
     painelDoGanhou.innerHTML += quadroNaVitoria;
     return quadroNaVitoria;
   }
