@@ -54,18 +54,14 @@ export default class Updaters{
   }
 
   desenhaQuadroNaVitoria(quadroNaVitoria, painelDoGanhou, tabela, matrizresultado){
-    console.log('Aq');
-    console.log(quadroNaVitoria);
     painelDoGanhou.style="display:block";
     tabela.style="display:none";
-    console.log(matrizresultado);
     for(let k = 0; k < matrizresultado.length; k++){
       for(let h = 0; h < matrizresultado[k].length; h++){
         quadroNaVitoria += `${matrizresultado[k][h]}`;
       }
       quadroNaVitoria += `</br>`;
     }
-    console.log(quadroNaVitoria);
     painelDoGanhou.innerHTML += quadroNaVitoria;
     return quadroNaVitoria;
   }

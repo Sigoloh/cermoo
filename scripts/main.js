@@ -28,14 +28,12 @@ updaters.updateStatus(
   document.getElementById('melhorSequencia'),
   document.getElementById('sequencia'),
 );
-const palavraDoDia = 'PLANO';
-//const palavraDoDia = set[parseInt(Math.random()*462 + 1)].toUpperCase();
-console.log(palavraDoDia);
+
+const palavraDoDia = set[parseInt(Math.random()*462 + 1)].toUpperCase();
 
 const matrizResultado = [];
 
 function submit(){
-  console.log('Entrou no submit');
   for(let i = 0; i < 5; i++){
     if(updaters.entrada[i] === palavraDoDia[i]){
       updaters.computaPalavra(i, 'certo', tabela[tentativa]);
@@ -47,7 +45,6 @@ function submit(){
   }
 
   matrizResultado.push(updaters.getJogada());  
-  console.log(matrizResultado);
   const ganhou = updaters.entrada.toUpperCase() === palavraDoDia.toUpperCase();
 
   let quadro = '';
@@ -55,15 +52,12 @@ function submit(){
   const painelDoGanhou = document.getElementById('painel');
   if(ganhou){
     const tabela = document.getElementById('gameBoard');
-    console.log(`Tabela no main ${tabela}`);
     quadro = updaters.desenhaQuadroNaVitoria(quadro, painelDoGanhou, tabela, matrizResultado);
     statusDoJogador.sequencia += 1;
   }
   if(ganhou || tentativa == 5){
     quadro = quadro.replace(/<\/br>/gm, '%0A');
     painelDoGanhou.innerHTML += `<a href="https://twitter.com/intent/tweet?text=${quadro}" class="twitter-share-button" data-text="${quadro}" data-url="http://sigolo.me" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> <br/> <a href="/">Jogar Novamente</a>`
-    console.log(`Quadro -> ${quadro}`);
-    console.log(statusDoJogador);
   }
   if(tentativa + 1 > 5){
     statusDoJogador.melhorSequencia =
@@ -75,7 +69,6 @@ function submit(){
     tabela.style="display:none"; 
     painelDoGanhou.style="display:block";
     painelDoGanhou.innerHTML +="<h1> Você Perderu </h1>"; 
-    console.log(statusDoJogador);
   }
   localStorage.setItem('statusDoJogador', JSON.stringify(statusDoJogador));
   updaters.updateStatus(
@@ -96,7 +89,6 @@ document.addEventListener('keydown', (event) => {
   }else if(event.key == 'Backspace' && updaters.entrada.length != 0){
     updaters.entrada = updaters.colocaLetraNaCelula(event.key, posicaoLetra, tabela[tentativa]);
     updaters.entrada = updaters.entrada.substring(0, updaters.entrada.length - 1);
-    console.log(`Tamanho da entrada -> ${entrada.length}`);
     posicaoLetra--;
   } else if(letras.indexOf(event.key) != -1 && updaters.entrada.length != 5){
     updaters.entrada = updaters.colocaLetraNaCelula(event.key, posicaoLetra, tabela[tentativa]);

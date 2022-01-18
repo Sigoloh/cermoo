@@ -15,31 +15,33 @@ A cada rodada, uma palavra palavra de 5 letras é sorteada, sua missão é acert
 
 Por exemplo, nesse jogo, a primeira tentativa será prato.
 
-![image-20220118181854777](/home/augustosigolo/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20220118181854777.png)
+![image-20220118181854777](./docs/image-20220118181854777.png)
 
 Após pressionar enter, o tabuleiro se modifica e fica assim
 
-![image-20220118182009367](/home/augustosigolo/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20220118182009367.png)
+![image-2](./docs/image-20220118182009367.png)
 
 Quadrados verdes significam que a letra existe na palavra e está na posição correta, quadrados vermelhos, significam que a letra não existe na palava.
 
 Em seguida, vamos testar a palavra pralo:
 
-![image-20220118182143047](/home/augustosigolo/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20220118182143047.png)
+![image-3](./docs/image-20220118182124401.png)
+
+![image-5](/home/augustosigolo/Augusto/cermoo/docs/image-20220118182143047.png)
 
 Quadrados amarelos significam que a letra existe na palavra mas está na posição errada.
 
 Por fim, vamos testar a palavra plano:
 
-![image-20220118183058858](/home/augustosigolo/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20220118183058858.png)
+![image-4](/home/augustosigolo/Augusto/cermoo/docs/image-20220118183058858.png)
 
 Por ser a palavra certa, quando você pressionar Enter, poderá escolher compartilhar no Twitter ou jogar de novo. Caso escolha jogar novamente, sua sequencia será acrescentada em 1.
 
-![image-20220118183223376](/home/augustosigolo/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20220118183223376.png)
+![image-20220118183223376](./docs/image-20220118183223376.png)
 
 Caso perca dessa vez, sua sequencia será zerada e, caso a sequencia atual seja maior que sua melhor sequencia, esta será modificada.
 
-![image-20220118183405330](/home/augustosigolo/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20220118183405330.png)
+![image-20220118183405330](./docs/image-20220118183405330.png)
 
 ### <a id="todo">TODO</a>
 
