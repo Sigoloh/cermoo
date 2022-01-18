@@ -10,9 +10,8 @@ body{
 }
 
 table{
-  width: 40vw;
-  height: 40vw;
   align-self: center;
+  border-spacing: 5px;
 }
 
 input{
@@ -25,11 +24,13 @@ input{
 }
 
 td{
-  border: 3px solid #abab;
-  color: lightgray;
-  min-width: 8vw;
-  min-height: 8vw;
+  border: 2px solid rgb(255, 255, 255, 0.5);
+  background: #100a10;
+  color: #191919;
+  width: 5vw;
+  height: 5vw;
   text-align: center;
   font-family: 'Roboto', sans-serif;
+  font-weight: 700;
   border-radius: 10px;
 }
