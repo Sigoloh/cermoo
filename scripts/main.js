@@ -58,7 +58,7 @@ function submit(){
   }
   if(ganhou || tentativa == 5){
     quadro = quadro.replace(/<\/br>/gm, '%0A');
-    painelDoGanhou.innerHTML += `<a href="https://twitter.com/intent/tweet?text=${quadro}" class="twitter-share-button" data-text="${quadro}" data-url="http://sigolo.me" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> <br/> <a href="/cermoo.html">Jogar Novamente</a>`
+    painelDoGanhou.innerHTML += `<a href="https://twitter.com/intent/tweet?text=${quadro}" class="twitter-share-button" data-text="${quadro}" data-url="http://sigolo.me" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> <br/> <a href="/cermo/cermoo.html">Jogar Novamente</a>`
   }
   if(tentativa + 1 > 5){
     statusDoJogador.melhorSequencia =
