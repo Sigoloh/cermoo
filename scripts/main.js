@@ -30,7 +30,7 @@ updaters.updateStatus(
 );
 
 const palavraDoDia = set[parseInt(Math.random()*462 + 1)].toUpperCase();
-
+console.log(palavraDoDia);
 const matrizResultado = [];
 
 function submit(){
@@ -49,18 +49,24 @@ function submit(){
 
   let quadro = '';
 
+  const mensagem = document.getElementById('mensagem');
   const painelDoGanhou = document.getElementById('painel');
   if(ganhou){
     const tabela = document.getElementById('gameBoard');
-    quadro = updaters.desenhaQuadroNaVitoria(quadro, painelDoGanhou, tabela, matrizResultado);
+    quadro = updaters.desenhaQuadroNaVitoria(quadro, mensagem, tabela, matrizResultado);
+    console.log(quadro);
     statusDoJogador.sequencia += 1;
-    painelDoGanhou.innerHTML += 'Voce ganhou';
+    mensagem.innerHTML += `<span> Você ganhou </span>`
+    mensagem.innerHTML += '<div class="tentativas"><p>Resumo das suas tentativas</p>';
+    mensagem.innerHTML +=`${quadro}</div>`;
+    console.log(mensagem);
   }
   if(ganhou || tentativa == 5){
+    const links = document.getElementById('links');
     quadro = quadro.replace(/<\/br>/gm, '%0A');
-    painelDoGanhou.innerHTML += `<a href="https://twitter.com/intent/tweet?text=${quadro}" class="twitter-share-button" data-text="${quadro}" data-url="http://sigolo.me" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> <br/> <a href="/cermoo/cermoo.html">Jogar Novamente</a>`
+    links.innerHTML += `<a href="https://twitter.com/intent/tweet?text=${quadro}" class="twitter-share-button" data-text="${quadro}" data-url="http://sigolo.me" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> <br/> <a href="/cermoo/cermoo.html">Jogar Novamente</a>`
   }
-  if(tentativa + 1 > 5){
+  if(!ganhou && tentativa + 1 > 5){
     statusDoJogador.melhorSequencia =
       statusDoJogador.sequencia > statusDoJogador.melhorSequencia ? 
       statusDoJogador.sequencia :
@@ -69,8 +75,8 @@ function submit(){
     const tabela = document.getElementById('gameBoard');
     tabela.style="display:none"; 
     painelDoGanhou.style="display:block";
-    painelDoGanhou.innerHTML +="<h1> Você Perderu </h1>"; 
-    painelDoGanhou.innerHTML +=`A palavra era ${palavraDoDia}`
+    mensagem.innerHTML +="<span> Você perdeu </span>"; 
+    mensagem.innerHTML +=`<p>A palavra era ${palavraDoDia}</p>`
   }
   localStorage.setItem('statusDoJogador', JSON.stringify(statusDoJogador));
   updaters.updateStatus(

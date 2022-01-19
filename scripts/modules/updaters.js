@@ -54,7 +54,7 @@ export default class Updaters{
   }
 
   desenhaQuadroNaVitoria(quadroNaVitoria, painelDoGanhou, tabela, matrizresultado){
-    painelDoGanhou.style="display:block";
+    painelDoGanhou.parentNode.style="display:block";
     tabela.style="display:none";
     for(let k = 0; k < matrizresultado.length; k++){
       for(let h = 0; h < matrizresultado[k].length; h++){
@@ -62,7 +62,6 @@ export default class Updaters{
       }
       quadroNaVitoria += `</br>`;
     }
-    painelDoGanhou.innerHTML += quadroNaVitoria;
     return quadroNaVitoria;
   }
 
