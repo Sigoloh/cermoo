@@ -54,6 +54,7 @@ function submit(){
     const tabela = document.getElementById('gameBoard');
     quadro = updaters.desenhaQuadroNaVitoria(quadro, painelDoGanhou, tabela, matrizResultado);
     statusDoJogador.sequencia += 1;
+    painelDoGanhou.innerHTML += 'Voce ganhou';
   }
   if(ganhou || tentativa == 5){
     quadro = quadro.replace(/<\/br>/gm, '%0A');
@@ -69,6 +70,7 @@ function submit(){
     tabela.style="display:none"; 
     painelDoGanhou.style="display:block";
     painelDoGanhou.innerHTML +="<h1> Você Perderu </h1>"; 
+    painelDoGanhou.innerHTML +=`A palavra era ${palavraDoDia}`
   }
   localStorage.setItem('statusDoJogador', JSON.stringify(statusDoJogador));
   updaters.updateStatus(
