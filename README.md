@@ -60,7 +60,7 @@ Esse jogo foi feito com base no jogo [term.ooo](https://term.ooo) como forma de 
 
 Sinta-se livre para fazer o que quiser com o código, logo menos adicionarei uma licensa aqui no github também.
 
-Sempre que houverem mudanças, você pode checá-las aqui.
+Sempre que houverem mudanças, você pode checá-las aqui, além disso, você pode jogar a versão mais recente do jogo em [projects.sigolo.me](projects.sigolo.me/cermoo/cermoo.html).
 
 Se quiser saber mais sobre mim, você pode visitar o [meu site](https://sigolo.me) e me enviar uma mensagem.
 
