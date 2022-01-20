@@ -45,7 +45,7 @@ Caso perca dessa vez, sua sequencia será zerada e, caso a sequencia atual seja 
 
 ### <a id="todo">TODO</a>
 
-- [ ] Fazer melhores telas de vencedor e perdedor
+- [X] Fazer melhores telas de vencedor e perdedor
 - [ ] Fazer um teclado para o jogo funcionar na versão mobile
 - [ ] Fazer dicas para as palavras da rodada como definição do dicionário
 - [ ] Fazer um board de highscore
