@@ -57,8 +57,7 @@ function submit(){
     console.log(quadro);
     statusDoJogador.sequencia += 1;
     mensagem.innerHTML += `<span> Você ganhou </span>`
-    mensagem.innerHTML += '<div class="tentativas"><p>Resumo das suas tentativas</p>';
-    mensagem.innerHTML +=`${quadro}</div>`;
+    mensagem.innerHTML += `<div class="tentativas"><p>Resumo das suas tentativas</p>${quadro}</div>`;
     console.log(mensagem);
   }
   if(ganhou || tentativa == 5){
