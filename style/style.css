@@ -115,3 +115,29 @@ main{
   text-align: center;
   font-size: 0.7em;
 }
+
+.dicaBox{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 30%;
+  align-self: center;
+  background: #cecece;
+  color: #191919;
+  font-size: 0.5em;
+  font-family: 'Roboto', sans-serif;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.dicaButton{
+  margin-top: 5px;
+  background: transparent;
+  border:none;
+  width: 3vw;
+  height: 3vw;
+}
+
+.dicaButton img{
+  width: 2vw;
+  height: 2vw;
+}

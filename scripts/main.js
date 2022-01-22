@@ -30,12 +30,15 @@ updaters.updateStatus(
 
 const objetoPalavraDoDia = getPalavraDoDia();
 const palavraDoDia = objetoPalavraDoDia.palavraParseada;
-console.log(palavraDoDia);
-//document.getElementById('resposta').innerHTML = palavraDoDia;
 
 const matrizResultado = [];
-const dicas = new Dicas();
-dicas.pedirDica(objetoPalavraDoDia.palavraNatural);
+async function pedirDica() {
+  const dicas = new Dicas();
+  const dica = await dicas.pedirDica(objetoPalavraDoDia.palavraNatural);
+  const dicaBox = document.getElementById('dica');
+  dicaBox.innerHTML = dica;
+  dicaBox.style = 'display: block';
+}
 function submit() {
   for (let i = 0; i < 5; i += 1) {
     if (updaters.entrada[i] === palavraDoDia[i]) {

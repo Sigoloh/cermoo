@@ -63,4 +63,20 @@
     border-radius: 3px;
 
   }
+
+  .dicaBox{
+    width: 100%;
+  }
+
+  .dicaButton{
+    background: transparent;
+    border:none;
+    width: 6vh;
+    height: 6vh;
+  }
+  
+  .dicaButton img{
+    width: 5vh;
+    height: 5vh;
+  }
 }

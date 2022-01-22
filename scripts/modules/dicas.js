@@ -11,8 +11,9 @@ class Dicas {
       const respostaDoDicionario = await (
         await fetch(`https://api.dicionario-aberto.net/word/${palavra}`)
       ).json();
+      console.log(respostaDoDicionario);
       const definicao = respostaDoDicionario[0].xml
-        ? respostaDoDicionario[0].xml.split('<def>')[1].split('</def>')[0].replace('\n', '')
+        ? respostaDoDicionario[0].xml.split('<def>')[1].split('</def>')[0].replace('\n', '').replace(/_/gm, ' ')
         : 'Ainda não temos dica para esta palavra';
       console.log(definicao);
       return definicao;
