@@ -1,4 +1,4 @@
-export default [
+const set = [
   'Gozar',
   'etica',
   'Kenga',

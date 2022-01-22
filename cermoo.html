@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/mobileStyle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap" rel="stylesheet">
     <title>Cermoo</title>
   </head>
   <body>
-    <script src="./scripts/modules/dicas.js"></script>
+    <script src="./scripts/palavras.js"></script>
+    <script src="./scripts/modules/updaters.js"></script>
         <main>
             <div class="placar">
         <p>Sequencia: <span id = "sequencia"></span></p>
@@ -62,12 +64,15 @@
           </tr>
         </tbody>
       </table>
+      <!--<p id="resposta"></p>-->
+      <input type="text" style="display: none;" class="mobileInput" id="mobileInput"/>
+      <button class="mobileSubmit" onclick="setEntrada('aloo')" style="display: none;">Enviar</button>
       <div class="fimDeJogo" style="display: none;" id="painel">
         <div id="mensagem"></div>
         <div id="links"></div>
       </div>
       <span class="githubButton"><img src="https://www.sigolo.me/img/github.34db91da.png"><a href="http://github.com/Sigoloh" target="_blank">Veja esse projeto no github</a></span>
     </main>
-    <script type="module" src="./scripts/main.js"></script>
+    <script src="./scripts/main.js"></script>
       </body>
 </html>

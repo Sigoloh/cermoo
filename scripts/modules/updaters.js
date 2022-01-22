@@ -1,4 +1,4 @@
-export default class Updaters {
+class Updaters {
   statusDoJogador;
 
   linha;

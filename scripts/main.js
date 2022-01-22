@@ -1,6 +1,3 @@
-import set from './palavras.js';
-import Updaters from './modules/updaters.js';
-
 const tabela = document.getElementById('gameBoard').children[0].children;
 
 if (!localStorage.getItem('statusDoJogador')) {
@@ -32,6 +29,8 @@ updaters.updateStatus(
 );
 
 const palavraDoDia = set[parseInt(Math.random() * 462 + 1, 10)].toUpperCase();
+
+//document.getElementById('resposta').innerHTML = palavraDoDia;
 
 const matrizResultado = [];
 
@@ -86,6 +85,17 @@ function submit() {
 }
 
 let posicaoLetra = 0;
+
+function setEntrada() {
+  let palavra = document.getElementById('mobileInput').value;
+  for (let i = 0; i < 5; i += 1) {
+    updaters.entrada = updaters.colocaLetraNaCelula(palavra[i], i, tabela[tentativa]);
+  }
+  submit(updaters.entrada);
+  palavra = '';
+  updaters.entrada = '';
+}
+
 document.addEventListener('keydown', (event) => {
   const letras = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
   if (event.key === 'Enter') {

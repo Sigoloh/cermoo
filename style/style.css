@@ -14,15 +14,6 @@ table{
   border-spacing: 5px;
 }
 
-input{
-  background: transparent;
-  border: 3px solid #abab;
-  padding: 10px;
-  border-radius: 10px;
-  font-size: 1em;
-  color: #FFF
-}
-
 td{
   border: 2px solid rgb(255, 255, 255, 0.5);
   background: #100a10;
@@ -41,7 +32,7 @@ main{
   align-content: center;
 }
 .placar{
-  width: 28vw;
+  width: 30%;
   padding: 0;
   align-self: center;
   display: flex;
@@ -53,7 +44,7 @@ main{
 
 .placar p{
   line-height: 0.2em;
-  font-size: 0.7em;
+  font-size: 0.5em;
   color: #cecece;
 }
 
