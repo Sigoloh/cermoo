@@ -28,12 +28,14 @@ updaters.updateStatus(
   document.getElementById('sequencia'),
 );
 
-const palavraDoDia = set[parseInt(Math.random() * 462 + 1, 10)].toUpperCase();
-
+const objetoPalavraDoDia = getPalavraDoDia();
+const palavraDoDia = objetoPalavraDoDia.palavraParseada;
+console.log(palavraDoDia);
 //document.getElementById('resposta').innerHTML = palavraDoDia;
 
 const matrizResultado = [];
-
+const dicas = new Dicas();
+dicas.pedirDica(objetoPalavraDoDia.palavraNatural);
 function submit() {
   for (let i = 0; i < 5; i += 1) {
     if (updaters.entrada[i] === palavraDoDia[i]) {
