@@ -30,7 +30,6 @@ updaters.updateStatus(
 
 const objetoPalavraDoDia = getPalavraDoDia();
 const palavraDoDia = objetoPalavraDoDia.palavraParseada;
-
 const matrizResultado = [];
 async function pedirDica() {
   const dicas = new Dicas();
@@ -85,6 +84,7 @@ function submit() {
     document.getElementById('melhorSequencia'),
     document.getElementById('sequencia'),
   );
+
   updaters.jogada = [];
   tentativa += 1;
 }
