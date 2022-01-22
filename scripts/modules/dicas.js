@@ -15,6 +15,9 @@ class Dicas {
         ? respostaDoDicionario[0].xml.split('<def>')[1].split('</def>')[0].replace('\n', '')
         : 'Ainda não temos dica para esta palavra';
       console.log(definicao);
+      return definicao;
     }
+    console.log('Você só pode pedir dicas de 5 em 5 jogadas acertadas');
+    return 'Você só pode pedir dicas de 5 em 5 jogadas acertadas';
   }
 }
